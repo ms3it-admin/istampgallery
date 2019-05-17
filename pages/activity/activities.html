@@ -1,0 +1,127 @@
+<div class="wrapper">
+	<div class="content">
+	<div class="container-fluid">
+		<div class="row container-fluid">
+			<div class="col-md-12">
+
+
+
+				<div class="row" style="margin-top: 5%;">
+					<div class="col-md-12">
+						<div class="box box-success">
+							
+							<div class="box-header bg-success">
+								<h3 class="box-title"> My Activities </h3>
+								<button class="btn btn-sm btn-primary" style="float: right;" data-toggle="collapse" href="#collapsable_tables" role="button" aria-expanded="false" aria-controls="collapsable_tables"><i class="fa fa-align-justify"></i></button>
+							</div>
+
+
+							<!-- collapsable tables -->
+							
+							<div id="collapsable_tables" class="collapse in ">
+
+								<!-- contributed -->
+								<div class="navbar navbar-expand-lg navbar-light bg-primary"  style="border-radius:0px; cursor:pointer;"><h4 class="container-fluid">Contribute Stamps <i class="fa fa-align-justify" style="float: right" data-toggle="collapse" href="#cs-table" aria-control='cs-tables'></i></h4></div>
+							
+							<div class="collapse in table-responsive"  id="cs-table">
+								<table class="table table-condensed table-bordered" id="cstampstab" style="overflow-x: scroll;">
+									<tr class="bg-info">
+										<td><b>Stamp Name</b></td>
+										<td><b>Uploaded On</b></td>
+										<td><b>Status</b></td>
+										<td><b>Actions</b></td>
+										<td><b>Feeds</b></td>
+										<td><b>Recommended</b></td>
+									</tr>
+								</table>
+
+							</div>
+							
+							<!-- end: contributed -->
+
+
+							<!-- subscribed forums -->
+							
+							<div class="navbar navbar-expand-lg navbar-light bg-primary"  style="border-radius:0px; cursor:pointer;"><h4 class="container-fluid">Subscribed Forums <i class="fa fa-align-justify" style="float: right" data-toggle="collapse" href="#sf-table" aria-control='sf-tables'></i></h4></div>
+							
+							<div class="collapse in table-responsive"  id="sf-table">
+								<table class="table table-condensed table-bordered" id="forumtab" style="overflow-x:scroll;">
+									<tr class="bg-info">
+										<td><b>Forum Name</b></td>
+										<td><b>Subscribes On</b></td>
+										<td><b>Status</b></td>
+										<td><b>Actions</b></td>
+										
+									</tr>
+								</table>
+
+							</div>
+							
+
+							<!-- end: subdvribed forums -->
+
+							<!-- Search History -->
+							<div class="navbar navbar-expand-lg navbar-light bg-primary"  style="border-radius:0px; cursor:pointer;"><h4 class="container-fluid">Search History <i class="fa fa-align-justify" style="float: right" data-toggle="collapse" href="#sh-table" aria-control='sh-tables'></i></h4></div>
+
+							<div class="collapse in table-responsive"  id="sh-table">
+								<table class="table table-condensed table-bordered" id="searchtab" style="overflow-x:scroll;">
+									<tr class="bg-info">
+										<td><b>Searched for</b></td>
+										<td><b>Date</b></td>
+										<td><b>Time</b></td>
+										<td><b>Related Searches</b></td>
+										<td><b>Dismiss</b></td>
+									</tr>
+								</table>
+
+							</div>
+
+							<!-- end: Search History-->
+
+							</div>
+
+							<!-- end: collapsable tables -->
+
+
+							
+						</div>
+					</div>
+				</div>
+
+
+
+			</div>
+		</div>
+	</div>
+   </div>
+</div>
+
+<script>
+	for(i=0;i<act_contributedstamps.length;i++)
+	{
+		var vals= "<tr><td>"+act_contributedstamps[i]['name']+"</td><td>"+act_contributedstamps[i]['dated']+"</td><td>"+act_contributedstamps[i]['status']+"</td><td>"+act_contributedstamps[i]['feeds']+"</td><td>"+act_contributedstamps[i]['views']+"</td><td>"+act_contributedstamps[i]['recommend']+"<a href='#' class='btn btn-sm'><i class='fa fa-arrow-circle-right'></i></a></td></tr>";
+
+		document.getElementById("cstampstab").insertRow(-1).innerHTML = vals;
+			
+
+
+	}
+	for(i=0;i<sub_forums.length;i++)
+	{
+		var vals= "<tr><td>"+sub_forums[i]['name']+"</td><td>"+sub_forums[i]['sub_on']+"</td><td>"+sub_forums[i]['status']+"</td><td>"+sub_forums[i]['unsubscribe']+"</td></tr>";
+
+		document.getElementById("forumtab").insertRow(-1).innerHTML = vals;
+			
+
+
+	}
+	for(i=0;i<search_history.length;i++)
+	{
+		var vals= "<tr><td>"+search_history[i]['name']+"</td><td>"+search_history[i]['date']+"</td><td>"+search_history[i]['time']+"</td><td>"+search_history[i]['related']+"</td><td>"+search_history[i]['dismiss']+"</td></tr>";
+
+		document.getElementById("searchtab").insertRow(-1).innerHTML = vals;
+			
+
+
+	}
+</script>

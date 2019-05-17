@@ -1,0 +1,319 @@
+
+<link rel="stylesheet" href="multiselect/multiselect.css">
+  <script type="text/javascript" src="multiselect/multiselect.js"></script>
+
+<!--main content -->
+<div class="wrapper content" style="padding-top: 70px;">
+<div class="container-fluid">
+  <!-- main division -->
+<div class="row">
+
+  <!-- side bar -->
+
+<!-- end of side bar -->
+<!-- rest contents -->
+<div class="col-md-12">
+<!-- end: side bar -->
+  <!-- editor's note -->
+  <div class="row container-fluid">
+    <div class="col-md-12" style="padding-bottom: 1%;">
+        
+          
+                  <h4 style="color:grey"><b>Editor's Note</b></h4>
+              
+                      <h5  style="color:grey" class="ml-auto">17-11-2018 05:00:PM</h5>
+                
+          <font color="gray"> We at istampgallery take immense pride in originality and authenticity of information. Please note all detail submitted below will undergo manual review and authentication of the document. You may be contacted over phone or email for additional details. Post approval from the administrator  your stamp will be uploaded in our website for public view. We at istampgallery take immense pride in originality and authenticity of information. Please note all detail submitted below will undergo manual review and authentication of the document. You may be contacted over phone or email for additional details. Post approval from the administrator  your stamp will be uploaded in our website for public view.</font>
+        
+    </div>
+  </div>
+ 
+  <!-- end: editor's note -->
+
+
+ <div class="row container-fluid">
+  
+
+  <!-- contents -->
+      
+
+          <!-- contributor's details-->
+          <div class="col-md-6">
+              <div class="box box-primary container-fluid">
+                <div class="box-header bg-warning">
+                    <h3 class="box-title"style="font-weight: bolder;">Contributor </h3>
+                </div>
+                <div class="row container-fluid" style="padding-top: 2%; padding-bottom: 2%;">
+                    <div class="col-md-4"style="font-weight: bolder;">
+                      Contributor's Name
+                    </div>
+                    <div class="col-md-8" style="font-weight: bolder;">
+                      Alexander Pierce
+                    </div>
+
+                </div>
+
+                <div class="row container-fluid" style="padding-top: 2%; padding-bottom: 2%;">
+                    <div class="col-md-4" style="font-weight: bolder;">
+                      Contact Number
+                    </div>
+                    <div class="col-md-8">
+                      <input type="tel" style="width: 100%;">
+                    </div>
+
+                </div>
+
+                <div class="row container-fluid" style="padding-top: 2%; padding-bottom: 4%;">
+                    <div class="col-md-4" style="font-weight: bolder;">
+                      Email
+                    </div>
+                    <div class="col-md-8">
+                      <input type="email" style="width: 100%;">
+                    </div>
+
+                </div>
+              </div>
+            </div>
+         
+          <!-- end: contributor's details -->
+
+
+          <!-- issued by -->
+            <div class="col-md-6">
+                <div class="box box-primary container-fluid" style="padding-bottom: 1%;">
+                    <div class="box-header bg-primary">
+                        <h3 class="box-title" style="color:#fff;" style="font-weight: bolder;"> Issued By: </h3>
+                    </div>
+                    <div class="row container-fluid"  style="padding-top: 2%; padding-bottom: 2%;">
+                        <div class="col-md-3" style="font-weight: bolder;">
+                          Issued By:
+                        </div>
+                         <div class="col-md-9">
+                          <select class="btn  btn-block btn-dark" style="border:#000 1px solid" id="select_issuedby" name="select_issuedby">
+                            
+                          </select>
+                        </div>
+                      </div>
+                      <div class="row container-fluid"  style="padding-top: 1%; padding-bottom: 2%;">
+                        <div class="col-md-3" style="font-weight: bolder;">
+                          Category
+                        </div>
+                         <div class="col-md-9">
+                          <select style="width:90%;" multiple="multiple"  id="multi_select1" name="multi_select1">
+                           
+                          </select>
+                        </div>
+                      </div>
+                      <div class="row container-fluid"  style="padding-top: 2%; padding-bottom: 2%;">
+                        <div class="col-md-3" style="font-weight: bolder;">
+                          Issued on
+                        </div>
+                        <div class="col-md-9">
+                           <div>
+                            <input type="date" name="issuedon" id="issuedon" style="border:none; border-bottom:black 1px solid;"> 
+                            <i class="fa fa-calendar"></i>
+                           </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="row container-fluid">
+          <!-- end: issude by -->
+
+          <!-- uploads -->
+            <div class="col-md-12 flat">
+              <div class="box box-success container-fluid" style="padding-bottom: 2%;">
+                <div class="box-header bg-success">
+                  <h3 class="box-title">Uploads </h3>
+                </div>
+                <div class="row container-fluid" style="padding-top: 2%;">
+                  <div class="col-md-2" style="font-weight: bolder;"  style="margin-bottom: 1%;">
+                    Upload Image:
+                  </div>
+                  <div class="col-md-10"  style="margin-bottom: 1%;">
+                    <font id="filea">Select an image file</font>
+                    <label for="upload_image"> &nbsp;&nbsp;<i class="fa fa-folder-open" style="cursor: pointer;"></i></label>
+                    <input  type="file" name="upload_image" id="upload_image" style="display: none;"       onchange="var fa=this.files[0].name; $('#filea').html(fa);">
+                  </div>
+
+                  <div class="col-md-2" style="font-weight: bolder; margin-bottom: 1%;">
+                    Upload Brochure:
+                  </div>
+                  <div class="col-md-10" style="margin-bottom: 1%;">
+                    <font id="fileb">Select a file</font>
+                    <label for="upload_brochure"> &nbsp;&nbsp;<i class="fa fa-folder-open" style="cursor: pointer;"></i></label>
+                    <input  type="file" name="upload_brochure" id="upload_brochure" style="display: none;" onchange=" var fb=this.files[0].name; $('#fileb').html(fb);">
+                  </div>
+                  <div class="col-md-2 container-fluid" style="font-weight: bolder;">
+                    Caption
+                  </div>
+                  <div class="col-md-10 container-fluid">
+                    <input type="text" name="get_caption" id="get_caption" style="width: 100%;margin-bottom: 2%;">
+                  </div>
+                  <div class="col-md-2 container-fluid" style="font-weight: bolder;">
+                    Issued For
+                  </div>
+                  <div class="col-md-10 container-fluid">
+                    <input type="text" name="get_issuad" id="get_issuad" style="width: 100%;margin-bottom: 2%;">
+                  </div>
+                  <div class="col-md-2 container-fluid" style="font-weight: bolder;">
+                    Design
+                  </div>
+                  <div class="col-md-10 container-fluid">
+                   <textarea name="get_design" id="get_design" style="width: 100%;margin-bottom: 2%;"></textarea>
+                  </div>
+                  <div class="col-md-2 container-fluid" style="font-weight: bolder;">
+                    Description
+                  </div>
+                  <div class="col-md-10 container-fluid">
+                   <textarea name="get_description" id="get_description" style="width: 100%;margin-bottom: 2%;"></textarea>
+                  </div>
+                  <div class="col-md-2 container-fluid"  style="font-weight: bolder;">
+                    Credits
+                  </div>
+                  <div class="col-md-10 container-fluid">
+                   <textarea name="get_credits" id="get_credits" style="width: 100%"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+      </div>
+            <!-- end: uploads -->
+
+     
+            <!--stamp deatails -->
+       <div class="row container-fluid">
+          <div class="col-md-12 flat">
+              <div class="box box-primary container-fluid">
+                <div class="box-header bg-primary">
+                  <h3 class="box-title" style="color: #fff;" style="font-weight: bolder;">Contents</h3>
+                </div>
+                <div class="row container-fluid" style="padding-top: 2%;">
+                    <div class="col-md-2" style="font-weight: bolder;">
+                      Type:
+                    </div>
+                    <div class="col-md-3" >
+                      <select class="btn btn-block  btn-light" style="border:1px solid black" id="typeselect" name="typeselect">
+                        
+                      </select>
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-2" style="font-weight: bolder;">
+                        Multi-Colors:
+                    </div>
+                    <div class="col-md-4">
+                      <select style="width:90%;" multiple id="multicolors">
+                            
+                          </select>
+                    </div>
+                  </div>
+                  <div class="row container-fluid" style="padding-top: 2%;">
+                    <div class="col-md-2" style="font-weight: bolder;">
+                      Denominations:
+                    </div>
+                    <div class="col-md-3" >
+                      <input type="text" style="width: 100%;">
+                    </div>
+                    <div class="col-md-1"></div>
+                     <div class="col-md-2" style="font-weight: bolder;">
+                      Stamps Printed
+                    </div>
+                    <div class="col-md-4">
+                      <input type="text" style="width: 100%;">
+                    </div>
+                </div>
+
+                <div class="row container-fluid" style="padding-top: 2%;">
+                    <div class="col-md-2" style="font-weight: bolder;">
+                     Printing Process
+                    </div>
+                    <div class="col-md-3" >
+                      <input type="text" style="width: 100%;">
+                    </div>
+                    <div class="col-md-1"></div>
+                     <div class="col-md-2" style="font-weight: bolder;">
+                     Printed By:
+                    </div>
+                    <div class="col-md-4">
+                      <input type="text" style="width: 100%;">
+                    </div>
+                </div>
+
+                <div class="row container-fluid" style="padding-top: 2%; padding-bottom: 2%;">
+                  <div class="col-md-2" style="font-weight: bolder;">
+                      Additional Notes:
+                  </div>
+                  <div class="col-md-10">
+                      <textarea id="add_notes" name="add_notes" style="width:100%"></textarea>
+                      <a href="#"  style="float: right; margin-bottom:1%; margin-top: 1%;" class="btn btn-sm btn-success"> Upload For Approval</a>
+                  </div>
+                </div>
+
+               
+              </div>
+          </div>
+        </div>
+          <!--end : stamp deatails -->
+
+
+  <!-- end: contents -->
+
+
+</div>
+<!-- end: rest of contents -->
+</div>
+<!-- end: main division -->
+</div>
+</div>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/multiple-select/1.2.3/multiple-select.min.js"></script>
+ <script src="json_js/jsobjects.js"></script>
+
+ 
+</head>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip();
+});
+  </script>
+   <script src="../../tinymce/plugin/tinymce/tinymce.min.js"></script>
+ 
+  <script>
+    tinymce.init({selector:'#get_design',statusbar:false,});
+    tinymce.init({selector:'#get_description',statusbar:false,});
+    tinymce.init({selector:'#get_credits',statusbar:false,});
+    tinymce.init({selector:'#add_notes',statusbar:false,});
+
+    
+      
+    
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    for(i=0;i<country.length;i++)
+    {
+      $("#select_issuedby").append("<option>"+country[i]['id']+" - "+country[i]['name']+"</option>");
+    }
+   
+    for(j=0;j<alltypes.length;j++)
+    {
+      $("#typeselect").append("<option>"+alltypes[j]['id']+" - "+alltypes[j]['name']+"</option>");
+    }
+
+    for(k=0;k<cats.length;k++)
+    {
+      $("#multi_select1").append("<option>"+cats[k]['name']+"</option>");
+    }
+
+    for(l=0;l<colors.length;l++)
+    {
+      $("#multicolors").append("<option>"+colors[l]['name']+"</option>");
+    }
+
+    $("#multi_select1").multipleSelect();
+    $("#multicolors").multipleSelect();
+  });
+</script>

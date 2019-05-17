@@ -1,0 +1,167 @@
+<link rel="stylesheet" href="multiselect/multiselect.css">
+  <script type="text/javascript" src="multiselect/multiselect.js"></script>
+
+<!--main content -->
+<div class="wrapper content" style="padding-top: 70px;">
+<div class="container-fluid">
+  <!-- main division -->
+<div class="row">
+
+  <!-- side bar -->
+
+<!-- page section -->
+<div class="col-md-12">
+
+	<!-- Editor's note -->
+
+	<div class="row container-fluid">
+    <div class="col-md-12" style="padding-bottom: 1%;">
+       
+                 <h4 style="color: grey"><b> Editor's Note </b></h4>
+             
+                    <h5  style="color:grey" class="ml-auto">17-11-2018 05:00:PM</h5>
+               
+          	<font color="gray">This is a dicussion forum with sole intension of bringing philatelist of similar interest, exchange their ideas and relevant stamp details pertaining to the topic.
+          	Requests participants to strictly avoid any political view or abusive languages in this forum. Please note that the forum or topics can be edited or deleted by the moderator on his sole discretion without consulting the members.<font color="gray">
+          
+       
+    </div>
+  
+
+  <!-- End: Editor's Note -->
+
+
+  	<div class="col-md-12">
+  		<div class="box box-warning" style="background: none; border:none; box-shadow: 0px 0px 0px black;">
+  			<div class="box-header bg-warning">
+  				<h3 class="box-title">
+  					Search Forum
+  				</h3>
+  				
+  			</div>
+  			<div class="row container-fluid">
+  				<div class="col-md-6" style="padding-bottom: 2%;">
+            <b>Forum Name:</b>
+            <input type="text" name="forumname" id="forumname" style="width:90%;" placeholder="Enter a name for your Forum">
+            
+          </div>
+
+          <div class="col-md-4" style="padding-bottom: 2%;"> 
+            <b>Category:</b>
+            <select id="dlist" name="dlist" multiple style="border:none;padding:2%; width:90%;" placeholder="select a Category">
+              
+            </select>
+          </div>
+
+          <div class="col-md-2"  style="margin-top:1.5%;">
+            <a href="#" class="btn btn-sm btn-warning"> Search Forum </a>
+          </div>
+        </div>
+        <div class="row container-fluid">
+  				<div class="col-md-12">
+  					<table class="table table-sm table-responsive" style="overflow: scroll;">
+              <tr>
+                <th scope="col">
+                  Sl.No:
+                </th>
+                <th scope="col">
+                  Forum Name
+                </th>
+                <th scope="col">
+                  Forum Category
+                </th>
+                <th scope="col">
+                  Subscribe
+                </th>
+              </tr>
+              <tr>
+                <th scope="row">1</th>
+                <td>India Music 90's</td>
+                <td>Music, 90's Music, India</td>
+                <td>
+                  <a href="#" class="btn btn-sm btn-block btn-primary" id="subs1" onclick="changesubscribe(this.id)"><i class="fa fa-circle" ></i> 
+                  Subscribe</a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>India World Cup 1983</td>
+                <td>Sports, World cup, Cricket, India</td>
+                <td>
+                  <a href="#" class="btn btn-sm btn-block btn-primary" id="subs2" onclick="changesubscribe(this.id)"><i class="fa fa-circle" ></i> 
+                  Subscribe</a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Sculpture Paris</td>
+                <td>Paris, Sculptures, France</td>
+                <td>
+                  <a href="#" class="btn btn-sm btn-block btn-primary" id="subs3" onclick="changesubscribe(this.id)"><i class="fa fa-circle" ></i> 
+                  Subscribe</a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td>Sculpture Paris</td>
+                <td>Paris, Sculptures, France</td>
+                <td>
+                  <a href="#" class="btn btn-sm btn-block btn-primary" id="subs4" onclick="changesubscribe(this.id)"><i class="fa fa-circle" ></i> 
+                  Subscribe</a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">5</th>
+                <td>Sculpture Paris</td>
+                <td>Paris, Sculptures, France</td>
+                <td>
+                  <a href="#" class="btn btn-sm btn-block btn-primary" id="subs5" onclick="changesubscribe(this.id)"><i class="fa fa-circle" ></i> 
+                  Subscribe</a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">6</th>
+                <td>Sculpture Paris</td>
+                <td>Paris, Sculptures, France</td>
+                <td>
+                  <a href="#" class="btn btn-sm btn-block btn-primary" id="subs6" onclick="changesubscribe(this.id)"><i class="fa fa-circle" ></i> 
+                  Subscribe</a>
+                </td>
+              </tr>
+            </table>
+  				</div>
+          
+  			</div>
+  		</div>
+  	</div>
+
+
+  </div>
+
+</div>
+
+<!--End: page section -->
+
+</div>
+</div>
+</div>
+
+
+
+<script src="json_js/jsobjects.js"></script>
+<script>
+	tinymce.init({selector:'#forums'});
+  function changesubscribe(id)
+  {
+    document.getElementById(id).style.background="green";
+    $("#"+id).html("Subscribed <i class='fa fa-check'></i>")
+  }
+   $(document).ready(function() {
+    for(k=0;k<cats.length;k++)
+    {
+      $("#dlist").append("<option>"+cats[k]['name']+"</option>");
+    }
+    $("#dlist").multipleSelect();
+  });
+
+	</script>

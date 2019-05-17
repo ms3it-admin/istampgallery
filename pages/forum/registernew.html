@@ -1,0 +1,90 @@
+<link rel="stylesheet" href="multiselect/multiselect.css">
+  <script type="text/javascript" src="multiselect/multiselect.js"></script>
+
+<!--main content -->
+<div class="wrapper content" style="padding-top: 70px;">
+<div class="container-fluid">
+  <!-- main division -->
+<div class="row">
+
+  <!-- side bar -->
+
+<!-- page section -->
+<div class="col-md-12">
+
+	<!-- Editor's note -->
+
+	<div class="row container-fluid" style="padding:1%;">
+    <div class="col-md-12">
+        
+          <h4 style="color: grey;"><b>Editor's Note</b></h4>
+             <h5 style="color: grey;">11-07-2018</h5>
+       <font color="grey">
+          	This is a dicussion forum with sole intension of bringing philatelist of similar interest, exchange their ideas and relevant stamp details pertaining to the topic.
+          	Requests participants to strictly avoid any political view or abusive languages in this forum.Please note that the forum or topics can be edited or deleted by the moderator on his sole discretion without consulting the members.
+            </font>
+          	   </div>
+        </div>
+    </div>
+  
+
+  <!-- End: Editor's Note -->
+
+
+  	<div class="col-md-12">
+  		<div class="box box-warning">
+  			<div class="box-header bg-warning">
+  				<h3 class="box-title">
+  					Register New Forum
+  				</h3>
+  				
+  			</div>
+  			<div class="row container-fluid">
+  				<div class="col-md-6" style="padding-bottom: 2%;">
+  					<b>Forum Name:</b>
+  					<input type="text" name="forumname" id="forumname" style="width:90%;" placeholder="Enter a name for your Forum">
+  					
+  				</div>
+
+  				<div class="col-md-6" style="padding-bottom: 2%;">	
+  					<b>Category:</b>
+  					<select id="dlist" name="dlist" multiple style="border:none;padding:2%; width:90%;" placeholder="select a Category">
+  						
+  					</select>
+  					
+  				</div>
+  				<div class="col-md-12" style="">
+  					<b> Forum Description : </b>
+  						 <textarea id="forums" name="forums" style="width:100%;"></textarea>
+  						
+  						<a href="#"  style="float: right; margin-bottom:1%; margin-top: 1%;" class="btn btn-sm btn-success"> Request Forum </a>
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+
+
+  </div>
+
+</div>
+
+<!--End: page section -->
+
+</div>
+</div>
+</div>
+  <script src="../../tinymce/plugin/tinymce/tinymce.min.js"></script>
+ 
+ 
+
+<script src="json_js/jsobjects.js"></script>
+<script>
+	tinymce.init({selector:'#forums',statusbar:false,});
+  $(document).ready(function() {
+    for(k=0;k<cats.length;k++)
+    {
+      $("#dlist").append("<option>"+cats[k]['name']+"</option>");
+    }
+    $("#dlist").multipleSelect();
+  });
+	</script>

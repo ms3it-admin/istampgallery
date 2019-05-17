@@ -1,0 +1,240 @@
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/multiple-select/1.2.3/multiple-select.min.css">
+<style type="text/css">
+  #showallbtn
+  {
+    position: fixed;
+    top: 30%;
+    right: 0px;
+    border:none;
+    border-radius: 20px 0px 0px 20px;
+  }
+  #showallbtn:hover
+  {
+    content: 'Show all';
+  }
+</style>
+<!--main content -->
+
+<div class="wrapper content" style="padding-top: 70px;">
+<div class="container-fluid">
+  <!-- main division -->
+<div class="row">
+
+<!-- page section -->
+<div class="col-md-12">
+
+	<div class="row container-fluid">
+    
+    <!--<div class="col-md-12" style="padding:2%;">
+      <button class="btn btn-sm btn-light">Search</button>
+      <button class="btn btn-sm btn-light">Show All</button>
+    </div>-->
+
+    <div class="col-md-2">
+      <div class="box box-success " style="cursor: pointer;">
+        <div class="box-header bg-success">
+          <h3 class="box-title">Search Criterea</h3>
+          
+          <i id="collapsebtn" class="fa fa-minus btn btn-sm" style="float: right;"  data-toggle="collapse" href="#searchcollapse" aria-controls="searchcollapse" data-widget="collapse" aria-expanded="true"></i>
+
+          
+
+        </div>
+        <div class="row container-fluid collapse in" id="searchcollapse">
+        <div class="row container-fluid" style="padding: 1%;" id="c1">
+            <div class="col-md-3">
+              <h5><b>Postage Name : </b></h5>
+              <input type="text" name="postage_search" id="postage_stamp" placeholder="Name of the postage stamp" style="width: 100%;">
+            </div>
+             <div class="col-md-3">
+              <h5><b>Theme :</b></h5> 
+               <select style="width:90%;" multiple  id="themeselect" placeholder="Select a theme">
+                            
+                </select>
+            </div>
+            <div class="col-md-3">
+              <h5><b>Postage Type: </b></h5>
+               <select style="width:90%;"  id="posttype" placeholder="Select a Postage Type">
+                            
+                </select>
+            </div>
+            <div class="col-md-3">
+                <h5><b>Issued By:</b></h5>
+                <select style="width:90%;"  id="issuedby" placeholder="Select Issued By:">
+                        
+                </select>
+            </div>
+       </div>
+       <div class="row container-fluid" id="c2">
+            <div class="col-md-3">
+              <h5><b>Uploaded By </b></h5>
+              <input type="text" style="width: 100%;" placeholder="Enter name of the uploader">
+            </div>
+            <div class="col-md-3">
+              <h5><b>Uploaded On </b></h5>
+              <input type="text" style="width: 100%;" placeholder="Enter name of the uploader">
+            </div>
+             <div class="col-md-3">
+              <h5><b>Issued  </b></h5>
+              <select style="width: 100%;" id="issued">
+                
+              </select>
+            </div>
+             <div class="col-md-3">
+              <h5><b>Issued On </b></h5>
+              <input type="date" style="width:100%;">
+            </div>
+          </div>
+          <div class="row container-fluid" id="c3">
+            <div class="col-md-3">
+              <h5><b>Uploaded By </b></h5>
+              <input type="text" style="width: 100%;" placeholder="Enter name of the uploader">
+            </div>
+            <div class="col-md-3">
+              <h5><b>Uploaded On </b></h5>
+              <input type="text" style="width: 100%;" placeholder="Enter name of the uploader">
+            </div>
+             <div class="col-md-3">
+              <h5><b>Choose Color </b></h5>
+              <select style="width:100%;" id="colors">
+                
+              </select>
+            </div>
+            <div class="col-md-3">
+              <h5><b>Print Condition</b></h5>
+              <select style="width:100%;" id="prints">
+                
+              </select>
+            </div>
+          </div>
+          <div class="row container-fluid" id="c4">
+            <div class="col-md-12">
+              <a href="#" class="btn btn-sm btn-success" style="margin-top:0.5%; margin-bottom: 1%; float:right" onclick="showsearch()">Search Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <!--<div class="col-md-6">
+        <div class="box box-warning">
+          <div class="box-header bg-warning">
+            <h3 class="box-title"> Search by uploads </h3>
+          </div>
+         
+        </div>
+    </div>-->
+
+    <!--<div class="col-md-6">
+      <div class="box box-success">
+        <div class="box-header bg-success">
+          <h3 class="box-title">Conditions</h3>
+        </div>
+        <div class="row container-fluid" style="padding: 2%;">
+          
+        </div>
+      </div>
+    </div>-->
+
+  </div>
+  
+</div>
+
+<!--End: page section -->
+
+</div>
+
+<!-- search result -->
+<div class="row" id="searchdiv" style="display: none;">
+    <div class="col-md-12">
+      <div class="row container-fluid">
+        <div class="col-md-12">
+          Search results
+        </div>
+      </div>
+    </div>
+</div>
+<!-- end: search result --->
+
+
+
+<!-- showall result -->
+<div class="row" id="showalldiv" style="display: none;">
+    <div class="col-md-12">
+      <div class="row container-fluid">
+        <div class="col-md-12">
+          Show all results
+        </div>
+      </div>
+    </div>
+</div>
+<!-- end: showall result -->
+
+
+
+<a href="#" class="btn btn-sm btn-danger" id="showallbtn" data-toggle="tooltip" data-placement="top" title="Show All Stamps" onclick="showall();"><i class="fa fa-film"></i></a>
+</div>
+</div>
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/multiple-select/1.2.3/multiple-select.min.js"></script>
+<script src="json_js/jsobjects.js"></script>
+<script>
+	tinymce.init({selector:'#forums'});
+	$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+
+   $(document).ready(function() {
+    for(k=0;k<cats.length;k++)
+    {
+      $("#themeselect").append("<option>"+cats[k]['name']+"</option>");
+    }
+    for(k=0;k<alltypes.length;k++)
+    {
+      $("#posttype").append("<option>"+alltypes[k]['name']+"</option>");
+    }
+    for(i=0;i<country.length;i++)
+    {
+      $("#issuedby").append("<option>"+country[i]['id']+" - "+country[i]['name']+"</option>");
+    }
+     for(i=0;i<country.length;i++)
+    {
+      $("#issued").append("<option>"+country[i]['id']+" - "+country[i]['name']+"</option>");
+    }
+    for(l=0;l<colors.length;l++)
+    {
+      $("#colors").append("<option>"+colors[l]['name']+"</option>");
+    }
+    for(l=0;l<prints.length;l++)
+    {
+      $("#prints").append("<option>"+prints[l]['name']+"</option>");
+    }
+    $("#themeselect").multipleSelect();
+  });
+
+   function showsearch()
+   {
+      $("#searchcollapse").collapse("hide");
+      $("#searchdiv").show();
+      $("#showalldiv").hide();
+   }
+
+     function showall()
+   {
+      $("#searchcollapse").collapse("hide");
+       $("#searchdiv").hide();
+      $("#showalldiv").show();
+   }
+   $("#searchcollapse").on('hidden.bs.collapse',function(){
+      $("#collapsebtn").addClass('fa-plus');
+      $("#collapsebtn").removeClass('fa-minus');
+   });
+   $("#searchcollapse").on('show.bs.collapse',function(){
+      $("#collapsebtn").addClass('fa-minus');
+      $("#collapsebtn").removeClass('fa-plus');
+   });
+
+	</script>

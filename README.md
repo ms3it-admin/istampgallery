@@ -1,1 +1,2 @@
-# istampgallery
+# iStampGallery
+

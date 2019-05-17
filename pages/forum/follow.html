@@ -1,0 +1,268 @@
+
+<!--main content -->
+<div class="wrapper content" style="padding-top: 70px;">
+<div class="container-fluid">
+  <!-- main division -->
+<div class="row">
+
+  <!-- side bar -->
+
+<!-- page section -->
+<div class="col-md-12">
+
+  <div class="row container-fluid">
+    <div class="col-md-12">
+      <div class="box box-success">
+        <div class="box-header bg-success">
+          <h3 class="box-title"> Follow Forum </h3>
+        </div>
+        <div class="row container-fluid" style="margin:1%; padding-bottom: 1%;">
+
+          <div class="col-md-3">
+            <h4><b> Subscribed Forum Name: </b></h4>
+            <input type="text" list="flist" placeholder="Search for forums" style="width: 60%;"> <a href="#" class="btn btn-sm" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-lg fa-vcard"></i> <br> <font size="1">View All </font></a>
+            <datalist id="flist">
+              
+            </datalist>
+
+          </div>
+
+          <div class="col-md-9 text-justify">
+            <h4><b>Forum Description</b></h4>
+            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--featured stamps -->
+
+   <div class="row container-fluid">
+    <div class="col-md-12">
+                <div class="box box-success">
+                  <div class="box-header bg-success">
+                    <h3 class="box-title"> Featured Stamps </h3>
+                  </div>
+                      
+                  
+                  <div class="col-lg-2 col-xs-6">
+                   
+                    <div class="box box-danger">
+                      <div class="box-header with-border">
+                        <span class="description">Savithri</span>
+                      </div>
+                      <!-- /.box-header -->
+                      <div class="box-body">
+                        <img class="img-responsive pad" src="images/Savitri-201x150.jpg" alt="Photo" />
+                      </div>
+                      <div class="box-footer">
+                        <p>
+                          <a class="text-purple text-sm" href="http://www.istampgallery.com/category/personality/actor/"
+                            rel="tag">Actor</a>,
+                          <a class="text-purple text-sm" href="http://www.istampgallery.com/category/brochure/"
+                            rel="tag">Brochure</a>,
+                          <a class="text-purple text-sm"
+                            href="http://www.istampgallery.com/category/personality/dancer/" rel="tag">Dancer</a>,
+                          <a class="text-purple text-sm"
+                            href="http://www.istampgallery.com/category/personality/director/" rel="tag">Director</a>,
+                          <a class="text-purple text-sm" href="http://www.istampgallery.com/category/film-music/"
+                            rel="tag">Film
+                            &amp; Music</a>,
+                          <a class="text-purple text-sm" href="http://www.istampgallery.com/category/nations/india/"
+                            rel="tag">India</a>,
+                          <a class="text-purple text-sm"
+                            href="http://www.istampgallery.com/category/personality/indian/" rel="tag">Indian</a>,
+                          <a class="text-purple text-sm" href="http://www.istampgallery.com/category/miniature-sheet/"
+                            rel="tag">Miniature Sheet</a>,
+                          <a class="text-purple text-sm"
+                            href="http://www.istampgallery.com/category/personality/singer/" rel="tag">Singer</a>,
+                          <a class="text-purple text-sm" href="http://www.istampgallery.com/category/women/"
+                            rel="tag">Women</a>,
+                          <a class="text-purple text-sm" href="http://www.istampgallery.com/tag/2011/"
+                            rel="tag">2011</a>,
+                          <a class="text-purple text-sm" href="http://www.istampgallery.com/tag/complete-series/"
+                            rel="tag">complete series</a> </p>
+                      </div>
+                    </div>
+                      <!-- /.box-body -->
+                   
+                  </div>
+                  
+                  
+                </div>
+              </div>
+  </div>
+
+  <!-- end: featured stamps -->
+
+  <!-- post -->
+    <div class="row container-fluid">
+      <div class="col-md-12">
+        <div class="box box-primary">
+          <div class="box-header bg-primary" style="color:white;">
+            <h3 class="box-title">Posts</h3>
+          </div>
+
+          <!-- post contents -->
+            <!-- new post -->
+          <div class="box box-success">
+            <div class="box-header">
+              <h5 class="box-title">
+                Add Post To This Forum</h5>
+                 <input type="submit" name="post_submit" name="post_submit" class="btn btn-sm btn-primary" style="float: right;" value="Post Now">
+                            
+            </div>
+            <textarea id="newpost" name="newpost"></textarea>
+          </div>
+          <!-- end: new post -->
+           
+          
+          <script>
+              for(i=0;i<posts.length;i++)
+              {
+                $("#postbody").append(
+                     "<div class='media' style='margin:2%; padding-bottom:1%;'> <div class='media-left'><a href='#'><img class='media-object' width='80' height='75' src='images/user.png' alt='user image'></a></div><div class='media-body'><h4 class='media-heading' style='font-weight: bolder;'>"+posts[i]['title']+"</h4><h6><b>"+posts[i]['name']+"</b></h6><p style='font-weight: 700;' class='text-justify'>"+posts[i]['post']+"</p><button class='btn btn-sm btn-primary' data-toggle='modal' data-target='#commentmodal'>Comments <span class='badge'>3</span></button><span style='padding-left: 2%;'><i class='fa fa-thumbs-up' style='cursor: pointer;'></i><span class='badge' style='padding-left: 1%;' data-toggle='modal' data-target='#likes'>3</span></span></div></div>"
+                  );
+              }
+          </script>
+          
+          
+          <div id="postbody">
+          </div>
+
+           
+             
+           <!-- end: post contents -->
+
+        </div>
+      </div>
+    <div>
+  <!-- end : post -->
+
+</div>
+
+<!--End: page section -->
+
+</div>
+</div>
+</div>
+
+ <script src="tinymce/plugin/tinymce/tinymce.min.js"></script>
+ <script src="json_js/jsobjects.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/multiple-select/1.2.3/multiple-select.min.js"></script>
+<script>
+	tinymce.init({selector:'#newpost'});
+  tinymce.init({selector:'#commentarea'});
+	$(function(){
+		$("#dlist").multipleSelect();
+	});
+  for(i in alltypes)
+  {
+    $("#flist").append("<option>"+alltypes[i]['name']+"</option>");
+  }
+	</script>  
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"><b>Subscribed Forums</b></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <ul class="list-group" id="cats">
+
+         <script>
+            for(i=0;i<cats.length;i++)
+            {
+              $("#cats").append("<li class='list-group-item'>"+cats[i]['name']+"<button class='btn btn-sm btn-danger' style='float:right; padding:0.5%;'>Open Forum</button></li>");
+            }
+         </script> 
+         
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="commentmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="commentmodaltitle"><b>Comments</b></h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>
+          <h5><b>Add comments </b></h5>
+          <textarea id="commentarea" name="commentarea"></textarea>
+          <button class="btn btn-sm btn-success" style="margin-top: 2%; ">Comment Now</button>
+        </p>
+
+        
+        <script>   
+          for(i=0;i<profiles.length;i++)
+          {
+              $("#commentsection").append(
+                  "<div class='alert box box-light'><p><h4>"+profiles[i]['name']+"</h4><h6>"+profiles[i]['posted']+"</h6></p><p>"+profiles[i]['comment']+"</p>"
+
+                );
+          }
+          </script>
+
+          <div id="commentsection">
+            
+               
+                
+            </div>
+      </div>
+            
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="likes" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="likeslabel"><b>Liked By </b></h5>
+        <button onclick="this.style.color='grey'; this.innerHTML='Liked';" class="btn btn-sm "><i class="fa fa-thumbs-up" style="color:blueviolet;"></i></button>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <ul class="list-group" id="likedby">
+          
+            <script>
+              for(i=0;i<likes.length;i++)
+              {
+                $("#likedby").append("<li class='list-group-item'>"+likes[i]['name']+"</li>");
+              }
+            </script>
+            
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
